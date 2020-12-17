@@ -63,15 +63,16 @@ SEO.defaultProps = {
 }
 
 const query = graphql`
-  query SEO {
+  {
     site {
       siteMetadata {
-        defaultTitle: title
+        title
         titleTemplate
-        defaultDescription: description
-        siteUrl: url
-        defaultImage: image
+        description
+        url
+        image
         twitterUsername
       }
     }
-  }`
+  }
+`

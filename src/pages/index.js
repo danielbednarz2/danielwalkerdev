@@ -1,12 +1,17 @@
 import React from "react"
-import Layout from "../componenets/layout"
+import Layout from "../componenets/layout";
+import Hero from "../componenets/hero";
+import AboutHome from "../componenets/aboutHome";
+import ProjectHome from "../componenets/projectHome";
+import ContactHome from "../componenets/contactHome";
+
 
 const Home = () => (
     <Layout>
-      <main>
-        <title>Home Page</title>
-        <h1>Hello World!</h1>
-      </main>
+      <Hero />
+      <AboutHome />
+      <ProjectHome />
+      <ContactHome />
     </Layout>
   )
 
