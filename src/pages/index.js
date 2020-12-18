@@ -7,12 +7,14 @@ import ContactHome from "../componenets/contactHome";
 
 
 const Home = () => (
+  <>
     <Layout>
       <Hero />
       <AboutHome />
       <ProjectHome />
       <ContactHome />
     </Layout>
-  )
+  </>
+)
 
-export default Home
+export default Home;

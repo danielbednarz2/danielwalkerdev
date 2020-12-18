@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Linkedin, Github, Twitter, Instagram } from "@styled-icons/boxicons-logos";
+
 const Bottom = styled.footer`
    min-height: 10vh;
    width: 100vw;

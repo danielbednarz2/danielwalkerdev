@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logoImage from "../images/logo_transparent.png"
+import logoImage from "../images/logo_transparent.png";
+import { Link } from "gatsby";
 
 const Top = styled.header`
     width: 100vw;
@@ -85,6 +86,11 @@ const Menu = styled.nav`
 
         li {
             margin-right: 2em;
+            > * {
+                :hover {
+                color: #F79F79;
+            }
+            }
         }
 
         a {
@@ -92,10 +98,6 @@ const Menu = styled.nav`
             text-decoration: none;
             color: #274A57;
             margin: auto;
-
-            :hover {
-                color: #F79F79;
-            }
         }
     }
 
@@ -124,17 +126,19 @@ const Menu = styled.nav`
 
         li {
             margin-top: 1rem;
+
+            > * {
+                :hover {
+                color: #9ec9db;
+            }
+            }
         }
 
         a {
             text-decoration: none;
             font-size: 1.25rem;
             transition: color 300ms;
-            color: #fff;
-
-            :hover {
-                color: #9ec9db;
-            }
+            color: #fff;        
         }
     }
 `
@@ -154,16 +158,16 @@ const Header = () => {
         <Menu nav={nav}>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <Link to={"/"}>Home</Link>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <Link to={"#about"}>About</Link>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <Link to={"/"}>Projects</Link>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <Link to={"/"}>Contact</Link>
                 </li>
             </ul>
         </Menu>

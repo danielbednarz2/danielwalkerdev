@@ -15,16 +15,29 @@ const Main = styled.main`
 `
 
 const Intro = styled.h1`
-    font-size: 2.75em;
+    font-size: 1.75em;
+    grid-area: 1 / 1 / 2 / 1;
+
+    @media (min-width: 900px) {
+        font-size: 2.2em;
+    }
+    @media (min-width: 1200px) {
+        font-size: 3em;
+    }
+    @media (min-width: 1500px) {
+        font-size: 3.5em;
+    }
+    @media (min-width: 1800px) {
+        font-size: 4em;
+    }
 `
 
 const Button = styled(Link)`
   border-radius: 5px;
   padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
   width: 7.5rem;
-  grid-area: 2 /1 / 2 / 1;
-  align-self: flex-start;
+  grid-area: 1 / 1 / 2 / 1;
+  align-self: flex-end;
   background: transparent;
   color: #083140;
   border: 2px solid #083140;
@@ -38,20 +51,44 @@ const Button = styled(Link)`
   }
 
   @media (min-width: 768px) {
-      margin-top: -4em;
+      margin-bottom: 5rem;
+  }
+  @media (min-width: 900px) {
+      margin-bottom: 8rem;
+  }
+  @media (min-width: 1080px) {
+      margin-bottom: 10rem;
+  }
+
+  @media (min-width: 1500px) {
+      margin-bottom: 12rem;
+  }
+
+  @media (min-width: 1920px) {
+      margin-bottom: 16rem;
+  }
+  @media (min-width: 2560px) {
+      margin-bottom: 20rem;
   }
 `
 
 const Blurb = styled.p`
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    grid-area: 1 / 2 / 2 / 3;
+    width: 90%;
+    margin: auto;
+
+    span {
+        color: #274a57;
+    }
 `
 
 const Hero = () => (
     <Main>
         <Intro>Hi, my name's Daniel.</Intro>
-        <Button to="/projects">My Work</Button>
+        <Button to={"/"}>My Work</Button>
         <Blurb>
-            I am a full stack web developer with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical and communicative skills on a development team.
+            I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
         </Blurb>
       </Main>
 )
