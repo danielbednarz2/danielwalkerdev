@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import aboutphoto from "../images/AboutPhoto.png"
-import { Html5, Css3, Javascript, NodeDotJs, Gatsby, NextDotJs, Graphql, ReactJs, Mongodb, MaterialUi, Mysql, Typescript} from "@icons-pack/react-simple-icons";
+import { Html5, Css3, Javascript, NodeDotJs, Gatsby, NextDotJs, Graphql, ReactJs, Mongodb, MaterialUi, Postgresql, Typescript} from "@icons-pack/react-simple-icons";
 
 
 const About = styled.main`
@@ -112,8 +112,8 @@ const Tech = styled.div`
         .myMongo {
             fill: #589636;
         }
-        .mySql {
-            fill: #f29111;
+        .myPostgres {
+            fill: #ffffff;
         }
         .myMaterial {
             fill: #03A9F4;
@@ -163,8 +163,8 @@ const AboutHome = () => (
                 <a href="https://www.gatsbyjs.com/" target="blank" rel="noreferrer">
                     <li><Gatsby className="myGatsby" /></li>
                 </a>
-                <a href="https://www.mysql.com/" target="blank" rel="noreferrer">
-                    <li><Mysql className="mySql"/> </li>
+                <a href="https://www.postgresql.org/" target="blank" rel="noreferrer">
+                    <li><Postgresql className="myPostgres"/> </li>
                 </a>
             </ul>
             <ul>
