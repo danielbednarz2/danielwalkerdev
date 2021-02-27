@@ -8,14 +8,17 @@ const Top = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em;
+    margin: 1em 1.2em;
 `
 
 const Logo = styled.img`
-    height: 5rem;
+    height: 4rem;
     width: auto;
     filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
     z-index: 5;
+
+    @media(max-width: 768px) {
+    }
 `
 
 const Ham = styled.button`
@@ -31,7 +34,6 @@ const Ham = styled.button`
         justify-content: space-around;
         width: 1.5rem;
         height: 1.5rem;
-        margin: 1em 2.5em 0 0;
         background: transparent;
         border: none;
         outline: none;

@@ -1,30 +1,39 @@
 import React from "react";
 import styled from "styled-components";
+import aboutphoto from "../images/profile.jpg"
 import { Link } from "gatsby";
 
 const Wrapper = styled.main`
     height: 70vh;
     width: 80vw;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (min-width: 1200px) {
         width: 70vw;
     }
+
+    @media (max-width: 768px) {
+        height: 100vh;
+    }
 `
 
 const Main = styled.div`
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     @media (max-width: 768px) {
         flex-direction: column;
+        width: 100%;
     }
 `
 
 const IntroWrapper = styled.div`
-    height: 25vh;
+    height: 50vh;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -32,17 +41,16 @@ const IntroWrapper = styled.div`
     justify-content: space-evenly;
 
     @media (max-width: 768px) {
-        align-items: center;
-    }
-
-    @media (max-width: 540px) {
         width: 85%;
     }
 `
 
 const Intro = styled.h1`
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.25rem;
+
 
     @media (min-width: 768px) {
         font-size: 1.6rem;
@@ -61,7 +69,31 @@ const Intro = styled.h1`
     }
 `
 
+const Photo = styled.img`
+    width: 50%;
+    height: auto;
+
+    @media (max-width: 768px) {
+        width: auto;
+    }
+`
+
+const PhotoDiv = styled.div`
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        height: auto;
+    }
+`
+
 const Button = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   width: 7.5rem;
   padding: 0.25rem;
@@ -80,28 +112,36 @@ const Button = styled(Link)`
 
 const Blurb = styled.p`
     height: auto;
+    width: 100%;
     font-size: 1.2rem;
-    width: 50%;
     span {
         color: #274a57;
     }
+    
+    @media (max-width: 1200px) {
+        font-size: 1rem;
+    }
 
     @media (max-width: 768px) {
-        width: 80%;
         font-size: .75rem;
     }
+
 `
+
 
 const Hero = () => (
     <Wrapper>
         <Main>
+            <PhotoDiv>
+                <Photo src={aboutphoto} />
+            </PhotoDiv>
             <IntroWrapper>
                 <Intro>Hi, my name's Daniel.</Intro>
+                <Blurb>
+                    I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
+                </Blurb>
                 <Button to={"/"}>My Work</Button>
             </IntroWrapper>
-            <Blurb>
-                I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
-            </Blurb>
         </Main>
     </Wrapper>
 )

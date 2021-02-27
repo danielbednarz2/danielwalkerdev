@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import aboutphoto from "../images/AboutPhoto.png"
 import { Html5, Css3, Javascript, NodeDotJs, Gatsby, NextDotJs, Graphql, ReactJs, MaterialUi, Postgresql, Typescript } from "@icons-pack/react-simple-icons";
 
 
@@ -24,22 +23,10 @@ const About = styled.div`
     }
 `
 
-const PhotoDiv = styled.div`
-    width: 25%;
-    display: flex;
-`
-
-const Photo = styled.img`
-    color: #d5e1e6;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-`
-
 const Info = styled.p`
     font-size: .85rem;
     color: #d5e1e6;
-    width: 30%;
+    width: 40%;
 
     @media (min-width: 1200px) {
         font-size: 1rem;
@@ -53,7 +40,7 @@ const Info = styled.p`
 `
 
 const Tech = styled.div`
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
     line-height: 3rem;
@@ -117,6 +104,7 @@ const Tech = styled.div`
         
         li {
             font-size: .7rem;
+            margin-right: 1em;
         }
     }
 `
@@ -124,9 +112,6 @@ const Tech = styled.div`
 const AboutHome = () => (
     <Wrapper>
       <About>
-        <PhotoDiv>
-            <Photo src={aboutphoto} alt="Daniel Walker"/>
-         </PhotoDiv>
         <Info>
             I am a self-taught developer and have spent the last few years learning the technologies listed here. Feel free to follow the links from the icon to see some projects/articles I've produced in each area of knowledge.
         </Info>
