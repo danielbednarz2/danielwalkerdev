@@ -28,6 +28,7 @@ const Photo = styled.img`
     color: #d5e1e6;
     width: 70%;
     height: auto;
+    object-fit: cover;
 `
 
 const Info = styled.p`
@@ -110,11 +111,11 @@ const Tech = styled.div`
 
     @media (max-width: 768px) {
         width: 50%;
-        line-height: 1rem;
-        justify-content: space-between;
+        line-height: 2rem;
+        justify-content: space-around;
         
         li {
-            font-size: .75rem;
+            font-size: .7rem;
         }
     }
 `

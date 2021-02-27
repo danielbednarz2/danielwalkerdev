@@ -77,9 +77,11 @@ const Project = styled.div`
 const Image = styled.img`
     width: 30%;
     height: auto;
+    object-fit: cover;
 
     @media (max-width: 768px) {
         height: 30%;
+        align-self: center;
     }
 `
 
@@ -90,9 +92,37 @@ const Description = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
+    h3 {
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            align-self: center;
+        }
+    }
+
+    p {
+        @media (max-width: 768px) {
+            font-size: .75rem;
+        }
+
+        @media (max-width: 540px) {
+            display: none;
+        }
+    } 
+
     ul {
       display: flex;
       justify-content: space-evenly;
+
+      li {
+          @media (max-width: 768px) {
+              font-size: .6rem;
+            }
+        
+            @media (max-width: 420px) {
+                font-size: .4rem;
+            }
+        
+      }
     }
 `
 
@@ -107,6 +137,10 @@ const Links = styled.div`
         &:hover {
             color: #F79F79;
         }
+    }
+
+    @media (max-width: 420px) {
+        font-size: .5rem;
     }
 `
 
