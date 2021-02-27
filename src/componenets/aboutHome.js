@@ -4,29 +4,34 @@ import aboutphoto from "../images/AboutPhoto.png"
 import { Html5, Css3, Javascript, NodeDotJs, Gatsby, NextDotJs, Graphql, ReactJs, MaterialUi, Postgresql, Typescript } from "@icons-pack/react-simple-icons";
 
 
-const About = styled.main`
-    height:auto;
+const Wrapper = styled.main`
+    height: auto;
     padding: 3em 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: #274a57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
 
+const About = styled.div`
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     @media (max-width: 768px) {
         flex-direction: column;
-        justify-content: space-between;
     }
 `
 
 const PhotoDiv = styled.div`
-    width: 33%;
+    width: 25%;
     display: flex;
-    justify-content: center;
 `
 
 const Photo = styled.img`
     color: #d5e1e6;
-    width: 70%;
+    width: auto;
     height: auto;
     object-fit: cover;
 `
@@ -34,7 +39,7 @@ const Photo = styled.img`
 const Info = styled.p`
     font-size: .85rem;
     color: #d5e1e6;
-    width: 20%;
+    width: 30%;
 
     @media (min-width: 1200px) {
         font-size: 1rem;
@@ -45,14 +50,10 @@ const Info = styled.p`
         margin: 2rem 0;
         font-size: .75rem;
     }
-
-    @media (min-width: 1200px) {
-        width: 33%;
-    }
 `
 
 const Tech = styled.div`
-    width: 33%;
+    width: 30%;
     display: flex;
     justify-content: space-evenly;
     line-height: 3rem;
@@ -121,7 +122,7 @@ const Tech = styled.div`
 `
 
 const AboutHome = () => (
-    <>
+    <Wrapper>
       <About>
         <PhotoDiv>
             <Photo src={aboutphoto} alt="Daniel Walker"/>
@@ -176,7 +177,7 @@ const AboutHome = () => (
         <div>
         </div>
       </About>
-    </>
+    </Wrapper>
   )
 
 export default AboutHome;
