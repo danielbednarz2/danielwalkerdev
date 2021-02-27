@@ -12,8 +12,8 @@ const Top = styled.header`
 `
 
 const Logo = styled.img`
-    width: 4rem;
-    height: auto;
+    height: 5rem;
+    width: auto;
     filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
     z-index: 5;
 `

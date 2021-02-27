@@ -27,9 +27,8 @@ const Shared = css`
 const Form = styled.form`
     width: 50%;
     padding: 1em;
-    background-color: #083140;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    background-color: #042835;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;

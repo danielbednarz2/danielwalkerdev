@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 const Wrapper = styled.main`
-    height: 100vh;
+    height: 70vh;
     width: 80vw;
     margin: auto;
 
