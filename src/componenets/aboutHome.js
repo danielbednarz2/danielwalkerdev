@@ -31,9 +31,13 @@ const Photo = styled.img`
 `
 
 const Info = styled.p`
-    font-size: 1rem;
+    font-size: .85rem;
     color: #d5e1e6;
     width: 20%;
+
+    @media (min-width: 1200px) {
+        font-size: 1rem;
+    }
 
     @media (max-width: 768px) {
         width: 60%;
@@ -55,7 +59,6 @@ const Tech = styled.div`
     li {
         font-size: 1rem;
         color: #d5e1e6;
-        margin-bottom: 1.1em;
 
         > * {
             width: 2.5em;

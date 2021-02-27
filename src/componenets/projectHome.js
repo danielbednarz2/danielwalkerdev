@@ -14,9 +14,9 @@ const Wrapper = styled.main`
     align-items: center;
 
     li {
-        font-size: 1rem;
+        font-size: .9rem;
         color: #d5e1e6;
-        margin-bottom: 1.2em;
+        margin: 1.2em 0;
         list-style: none;
 
         > * {

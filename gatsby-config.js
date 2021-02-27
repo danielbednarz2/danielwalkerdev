@@ -30,5 +30,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Discover Boldly',
+        icon: './src/images/logo_transparent.png'
+      }
+    }
   ],
 };
