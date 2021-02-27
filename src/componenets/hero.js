@@ -2,42 +2,69 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const Main = styled.main`
+const Wrapper = styled.main`
     height: 100vh;
-    width: 90vw;
+    width: 80vw;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    gap: 1.5em;
-    justify-content: center;
+
+    @media (min-width: 1200px) {
+        width: 70vw;
+    }
+`
+
+const Main = styled.div`
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+
+const IntroWrapper = styled.div`
+    height: 25vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
+
+    @media (max-width: 540px) {
+        width: 85%;
+    }
 `
 
 const Intro = styled.h1`
-    font-size: 1.75em;
-    grid-area: 1 / 1 / 2 / 1;
+    display: flex;
+    font-size: 1.25rem;
 
-    @media (min-width: 900px) {
-        font-size: 2.2em;
+    @media (min-width: 768px) {
+        font-size: 1.6rem;
     }
+
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
+
     @media (min-width: 1200px) {
-        font-size: 3em;
+        font-size: 2.2rem;
     }
-    @media (min-width: 1500px) {
-        font-size: 3.5em;
-    }
-    @media (min-width: 1800px) {
-        font-size: 4em;
+
+    @media (min-width: 1600px) {
+        font-size: 2.5rem;
     }
 `
 
 const Button = styled(Link)`
   border-radius: 5px;
-  padding: 0.5rem 0;
   width: 7.5rem;
-  grid-area: 1 / 1 / 2 / 1;
-  align-self: flex-end;
+  padding: 0.25rem;
   background: transparent;
   color: #083140;
   border: 2px solid #083140;
@@ -49,48 +76,34 @@ const Button = styled(Link)`
     background: #F79F79;
     color: white;
   }
-
-  @media (min-width: 768px) {
-      margin-bottom: 5rem;
-  }
-  @media (min-width: 900px) {
-      margin-bottom: 8rem;
-  }
-  @media (min-width: 1080px) {
-      margin-bottom: 10rem;
-  }
-
-  @media (min-width: 1500px) {
-      margin-bottom: 12rem;
-  }
-
-  @media (min-width: 1920px) {
-      margin-bottom: 16rem;
-  }
-  @media (min-width: 2560px) {
-      margin-bottom: 20rem;
-  }
 `
 
 const Blurb = styled.p`
+    height: auto;
     font-size: 1.2rem;
-    grid-area: 1 / 2 / 2 / 3;
-    width: 90%;
-    margin: auto;
-
+    width: 50%;
     span {
         color: #274a57;
+    }
+
+    @media (max-width: 768px) {
+        width: 80%;
+        font-size: .75rem;
     }
 `
 
 const Hero = () => (
-    <Main>
-        <Intro>Hi, my name's Daniel.</Intro>
-        <Button to={"/"}>My Work</Button>
-        <Blurb>
-            I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
-        </Blurb>
-      </Main>
+    <Wrapper>
+        <Main>
+            <IntroWrapper>
+                <Intro>Hi, my name's Daniel.</Intro>
+                <Button to={"/"}>My Work</Button>
+            </IntroWrapper>
+            <Blurb>
+                I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
+            </Blurb>
+        </Main>
+    </Wrapper>
 )
 
 export default Hero;

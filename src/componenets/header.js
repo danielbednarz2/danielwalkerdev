@@ -4,23 +4,18 @@ import logoImage from "../images/logo_transparent.png";
 import { Link } from "gatsby";
 
 const Top = styled.header`
-    width: 100vw;
-    min-height: 10vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1em;
 `
 
 const Logo = styled.img`
-    width: 10%;
+    width: 4rem;
     height: auto;
     filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
     z-index: 5;
-    margin: 1em 0 0 2em;
-
-    @media (min-width: 768px) {
-        width: 7.5%;
-    }
 `
 
 const Ham = styled.button`
@@ -78,7 +73,6 @@ const Menu = styled.nav`
         text-align: center;
         flex-wrap: nowrap;
         font-size: 1.25em;
-        height: 10vh;
 
         ul {
             display: flex;

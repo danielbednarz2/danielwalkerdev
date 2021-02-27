@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "Daniel Walker",
     description: "Portfolio",
     url: "https://danielwalker.dev",
-    image: "/images/icon.png",
+    image: "/public/favicon.ico",
     twitterUsername:"@danielwalkerdev",
   },
   plugins: [
