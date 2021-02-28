@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../componenets/layout";
 import Hero from "../componenets/hero";
-import AboutHome from "../componenets/aboutHome";
-import ProjectHome from "../componenets/projectHome";
-import ContactHome from "../componenets/contactHome";
+import AboutHome from "./aboutHome";
+import ProjectHome from "./projectHome";
+import ContactHome from "./contactHome";
 
 
 const Home = () => (

@@ -5,7 +5,6 @@ import { Html5, Css3, Javascript, NodeDotJs, Gatsby, NextDotJs, Graphql, ReactJs
 
 const Wrapper = styled.main`
     height: auto;
-    padding: 3em 0;
     background-color: #274a57;
     display: flex;
     align-items: center;
@@ -15,11 +14,16 @@ const Wrapper = styled.main`
 const About = styled.div`
     width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 1em 0;
     
     @media (max-width: 768px) {
         flex-direction: column;
+    }
+
+    @media (min-width: 1200px) {
+        width: 80%;
     }
 `
 
@@ -32,10 +36,14 @@ const Info = styled.p`
         font-size: 1rem;
     }
 
+    @media (min-width: 1600px) {
+        width: 33%;
+    }
+
     @media (max-width: 768px) {
-        width: 60%;
-        margin: 2rem 0;
+        width: 70%;
         font-size: .75rem;
+        padding: 1em 0;
     }
 `
 
@@ -44,9 +52,10 @@ const Tech = styled.div`
     display: flex;
     justify-content: space-evenly;
     line-height: 3rem;
+    margin-top: 1em;
 
     li {
-        font-size: 1rem;
+        font-size: .9rem;
         color: #d5e1e6;
 
         > * {
@@ -101,16 +110,24 @@ const Tech = styled.div`
         width: 50%;
         line-height: 2rem;
         justify-content: space-around;
+        padding: 1em 0;
         
         li {
             font-size: .7rem;
-            margin-right: 1em;
         }
+    }
+
+    @media (max-width: 768px) {
+        width: 60%;
+    }
+
+    @media (min-width: 1600px) {
+        width: 33%;
     }
 `
 
 const AboutHome = () => (
-    <Wrapper>
+    <Wrapper className="about">
       <About>
         <Info>
             I am a self-taught developer and have spent the last few years learning the technologies listed here. Feel free to follow the links from the icon to see some projects/articles I've produced in each area of knowledge.
@@ -159,8 +176,6 @@ const AboutHome = () => (
                 </a>
             </ul>
         </Tech>
-        <div>
-        </div>
       </About>
     </Wrapper>
   )

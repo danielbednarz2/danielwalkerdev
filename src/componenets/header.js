@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logoImage from "../images/logo_transparent.png";
 import { Link } from "gatsby";
 
+
 const Top = styled.header`
     height: 10vh;
     display: flex;
@@ -139,6 +140,7 @@ const Menu = styled.nav`
     }
 `
 
+
 const Header = () => {
 
     const [nav, showNav] = useState(false)
@@ -154,16 +156,16 @@ const Header = () => {
         <Menu nav={nav}>
             <ul>
                 <li>
-                    <Link to={"/"}>Home</Link>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to={"#about"}>About</Link>
+                    <Link to="/aboutHome">About</Link>
                 </li>
                 <li>
-                    <Link to={"/"}>Projects</Link>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li>
-                    <Link to={"/"}>Contact</Link>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         </Menu>

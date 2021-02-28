@@ -183,7 +183,7 @@ const TechnologiesIncludes = styled.span`
 
 const ProjectHome = () => (
     <>
-      <Wrapper>
+      <Wrapper className="projects">
         <Project>
             <Image src={netflix} />
             <Description>

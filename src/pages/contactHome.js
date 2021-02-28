@@ -131,7 +131,7 @@ const FormError = styled.div`
 
 const ContactHome = () => (
     <>
-      <Contact>
+      <Contact className="contact">
         <Form>
             <h2>Contact Me</h2>
             <FormFieldset>

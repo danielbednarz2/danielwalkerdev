@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import aboutphoto from "../images/profile.jpg"
-import { Link } from "gatsby";
+// import aboutphoto from "../images/profile.jpg"
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image"
+
+
 
 const Wrapper = styled.main`
     height: 70vh;
@@ -13,10 +16,6 @@ const Wrapper = styled.main`
 
     @media (min-width: 1200px) {
         width: 70vw;
-    }
-
-    @media (max-width: 768px) {
-        height: 100vh;
     }
 `
 
@@ -69,7 +68,7 @@ const Intro = styled.h1`
     }
 `
 
-const Photo = styled.img`
+const Photo = styled(Img)`
     width: 50%;
     height: auto;
 
@@ -129,21 +128,36 @@ const Blurb = styled.p`
 `
 
 
-const Hero = () => (
-    <Wrapper>
-        <Main>
-            <PhotoDiv>
-                <Photo src={aboutphoto} />
-            </PhotoDiv>
-            <IntroWrapper>
-                <Intro>Hi, my name's Daniel.</Intro>
-                <Blurb>
-                    I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
-                </Blurb>
-                <Button to={"/"}>My Work</Button>
-            </IntroWrapper>
-        </Main>
-    </Wrapper>
-)
+const Hero = () => {
+
+    const data = useStaticQuery(graphql`
+    query {
+      profileImage: file(relativePath: {eq: "profile.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    `)
+
+    return (
+        <Wrapper className="home">
+            <Main>
+                <PhotoDiv>
+                    <Photo fluid={data.profileImage.childImageSharp.fluid} alt="Profile Image"/>
+                </PhotoDiv>
+                <IntroWrapper>
+                    <Intro>Hi, my name's Daniel.</Intro>
+                    <Blurb>
+                        I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
+                    </Blurb>
+                    <Button to={"/"}>My Work</Button>
+                </IntroWrapper>
+            </Main>
+        </Wrapper>
+    )
+}
 
 export default Hero;
