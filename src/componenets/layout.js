@@ -13,6 +13,7 @@ const Wrapper = createGlobalStyle`
         font-family: "Open Sans", sans-serif;
         color: #083140;
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     *::-webkit-scrollbar {

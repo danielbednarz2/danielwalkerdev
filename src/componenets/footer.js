@@ -24,22 +24,39 @@ const LinkedInIcon = styled(Linkedin)`
     height: 2rem;
     width: auto;
     margin-right: 1em;
+
+    &:hover {
+            fill: #2867B2;
+        }
 `
+
 const GithubIcon = styled(Github)`
     height: 2rem;
     width: auto;
     margin-right: 1em;
+
+    &:hover {
+            fill: #333;
+        }
 `
 
 const TwitterIcon = styled(Twitter)`
     height: 2rem;
     width: auto;
     margin-right: 1em;
+
+    &:hover {
+            fill: #1DA1F2;
+        }
 `
 
 const InstagramIcon = styled(Instagram)`
     height: 2rem;
     width: auto;
+
+    &:hover {
+            fill: #C13584;
+        }
 `
 
 const Footer = () => (

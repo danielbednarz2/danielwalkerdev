@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import aboutphoto from "../images/profile.jpg"
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image"
 
 
@@ -89,7 +88,7 @@ const PhotoDiv = styled.div`
     }
 `
 
-const Button = styled(Link)`
+const Button = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,6 +105,7 @@ const Button = styled(Link)`
   :hover {
     background: #F79F79;
     color: white;
+    cursor: pointer;
   }
 `
 
@@ -143,7 +143,7 @@ const Hero = () => {
     `)
 
     return (
-        <Wrapper className="home">
+        <Wrapper id="home">
             <Main>
                 <PhotoDiv>
                     <Photo fluid={data.profileImage.childImageSharp.fluid} alt="Profile Image"/>
@@ -153,7 +153,7 @@ const Hero = () => {
                     <Blurb>
                         I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
                     </Blurb>
-                    <Button to={"/"}>My Work</Button>
+                    <Button href="#projects"> My Work</Button>
                 </IntroWrapper>
             </Main>
         </Wrapper>

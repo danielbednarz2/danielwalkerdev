@@ -36,6 +36,10 @@ const Form = styled.form`
     
     > * {
         font-size: .75rem;
+
+        @media (max-width: 600px) {
+            font-size: .6rem;
+        }
     }
 
     label {
@@ -48,27 +52,56 @@ const Form = styled.form`
         color: #d5e1e6;
         font-size: 1.5rem;
         margin-bottom: 1rem;
+
+        @media (max-width: 600px) {
+            font-size: 1.2rem;
+        }
     }
 
     .firstNameLabel {
+        @media (max-width: 768px) {
+            width: 30%;
+            align-self: center;
+        }
     }
     
     .lastNameLabel {
+        @media (max-width: 768px) {
+            width: 30%;
+            align-self: center;
+        }
     }
 
     .firstName {
+        @media (max-width: 768px) {
+            width: 70%;
+            height: 1.5rem;
+        }
     }
 
     .lastName {
+        @media (max-width: 768px) {
+            width: 70%;
+        }
     }
 
     .emailLabel {
+        @media (max-width: 768px) {
+            width: 30%;
+            align-self: center;
+        }
     }
 
     .email {
+        @media (max-width: 768px) {
+            width: 70%;
+        }
     }
 
     .messageLabel {
+        @media (max-width: 768px) {
+            padding-bottom: .5em;
+        }
     }
 
     .message {
@@ -107,6 +140,22 @@ const NameInput = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        padding: .5em 0;
+    }
+`
+const EmailInput = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        padding: .5em 0;
+    }
 `
 
 const FormInput = styled.input`
@@ -131,8 +180,8 @@ const FormError = styled.div`
 
 const ContactHome = () => (
     <>
-      <Contact className="contact">
-        <Form>
+      <Contact id="contact">
+        <Form action="mailto:danielbednarz2@gmail.com" method="POST" enctype="multipart/form-data">
             <h2>Contact Me</h2>
             <FormFieldset>
                 <NameInput>
@@ -144,11 +193,13 @@ const ContactHome = () => (
                     <FormInput type="text" name="lastName" className="lastName"/>
                 </NameInput>
             </FormFieldset>
-            <label htmlFor="email" className="emailLabel">Email: </label>
-            <FormInput type="email" name="email" className="email"/>
+            <EmailInput>
+                <label htmlFor="email" className="emailLabel">Email: </label>
+                <FormInput type="email" name="email" className="email"/>
+            </EmailInput>
             <label htmlFor="message" className="messageLabel">Message: </label>
             <FormTextArea name="message" className="message" rows={3}/>
-            <FormError className="errorMessage"><p>Error Message Here</p></FormError>
+            <FormError className="errorMessage"><p></p></FormError>
             <FormButton type="submit" className="submit">Submit</FormButton>
         </Form>
       </Contact>

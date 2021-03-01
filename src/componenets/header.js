@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logoImage from "../images/logo_transparent.png";
-import { Link } from "gatsby";
 
 
 const Top = styled.header`
@@ -69,11 +68,12 @@ const Ham = styled.button`
 `
 
 const Menu = styled.nav`
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
     @media (min-width: 768px) {
-        display: flex;
         justify-content: space-between;
-        align-items: center;
-        text-align: center;
         flex-wrap: nowrap;
         font-size: 1.25em;
 
@@ -83,27 +83,25 @@ const Menu = styled.nav`
 
         li {
             margin-right: 2em;
+
             > * {
                 :hover {
                 color: #F79F79;
+                }
             }
-            }
-        }
 
-        a {
-            margin-right: 1.25rem;
-            text-decoration: none;
-            color: #274A57;
-            margin: auto;
+            a {
+                margin-right: 1.25rem;
+                text-decoration: none;
+                color: #274A57;
+                margin: auto;
+            }
         }
     }
 
     @media (max-width: 768px) {
-        display:flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
         font-size: 1rem;
         padding-bottom: 1rem;
         height: 33vh;
@@ -127,7 +125,7 @@ const Menu = styled.nav`
             > * {
                 :hover {
                 color: #9ec9db;
-            }
+                }
             }
         }
 
@@ -156,16 +154,16 @@ const Header = () => {
         <Menu nav={nav}>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <a href="#home" onClick={() => showNav(!nav)}>Home</a>
                 </li>
                 <li>
-                    <Link to="/aboutHome">About</Link>
+                    <a href="#about" onClick={() => showNav(!nav)}>About</a>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <a href="#projects" onClick={() => showNav(!nav)}>Projects</a>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <a href="#contact" onClick={() => showNav(!nav)}>Contact</a>
                 </li>
             </ul>
         </Menu>
