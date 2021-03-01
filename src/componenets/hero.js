@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image"
+import { Link } from 'react-scroll';
 
 
 
@@ -88,7 +89,7 @@ const PhotoDiv = styled.div`
     }
 `
 
-const Button = styled.a`
+const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +154,7 @@ const Hero = () => {
                     <Blurb>
                         I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
                     </Blurb>
-                    <Button href="#projects"> My Work</Button>
+                    <Button to="projects"> My Work</Button>
                 </IntroWrapper>
             </Main>
         </Wrapper>
