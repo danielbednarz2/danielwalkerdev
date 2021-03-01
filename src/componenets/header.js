@@ -14,10 +14,11 @@ const Top = styled.header`
 const Logo = styled.img`
     height: 4rem;
     width: auto;
-    filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
+    filter: invert(100);
     z-index: 5;
 
     @media(max-width: 768px) {
+    filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
     }
 `
 
