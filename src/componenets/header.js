@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logoImage from "../images/logo_transparent.png";
+import { Link } from 'react-scroll';
 
 
 const Top = styled.header`
@@ -155,16 +156,16 @@ const Header = () => {
         <Menu nav={nav}>
             <ul>
                 <li>
-                    <a href="#home" onClick={() => showNav(!nav)}>Home</a>
+                    <Link to="home" style={{cursor: 'pointer'}} onClick={() => showNav(!nav)}>Home</Link>
                 </li>
                 <li>
-                    <a href="#about" onClick={() => showNav(!nav)}>About</a>
+                    <Link to="about" style={{cursor: 'pointer'}} onClick={() => showNav(!nav)}>About</Link>
                 </li>
                 <li>
-                    <a href="#projects" onClick={() => showNav(!nav)}>Projects</a>
+                    <Link to="projects" style={{cursor: 'pointer'}} onClick={() => showNav(!nav)}>Projects</Link>
                 </li>
                 <li>
-                    <a href="#contact" onClick={() => showNav(!nav)}>Contact</a>
+                    <Link to="contact" style={{cursor: 'pointer'}} onClick={() => showNav(!nav)}>Contact</Link>
                 </li>
             </ul>
         </Menu>
