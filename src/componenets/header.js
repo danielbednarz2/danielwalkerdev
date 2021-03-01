@@ -88,7 +88,7 @@ const Menu = styled.nav`
 
             > * {
                 :hover {
-                color: #F79F79;
+                color: #F79F00;
                 }
             }
 

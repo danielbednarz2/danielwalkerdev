@@ -9,7 +9,7 @@ const Contact = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #274a57;
+    background-color: #d5e1e6;
     color: #d5e1e6;
 `
 
@@ -27,7 +27,7 @@ const Shared = css`
 const Form = styled.form`
     width: 50%;
     padding: 1em;
-    background-color: #042835;
+    background-color: #274A57;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ const Form = styled.form`
         margin: 2em 0;
 
         p {
-            color: #d5e1e6;
+            color: #B56917;
         }
     }
 

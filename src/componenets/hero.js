@@ -104,7 +104,7 @@ const Button = styled(Link)`
   transition: 300ms;
 
   :hover {
-    background: #F79F79;
+    background: #F79F00;
     color: white;
     cursor: pointer;
   }
