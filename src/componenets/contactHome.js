@@ -178,10 +178,11 @@ const FormError = styled.div`
 
 `
 
+
 const ContactHome = () => (
     <>
       <Contact id="contact">
-        <Form action="mailto:danielbednarz2@gmail.com" method="POST" enctype="multipart/form-data">
+        <Form action="https://intense-fortress-71307.herokuapp.com/submit-form" method="post" enctype="application/x-www-form-urlencoded">
             <h2>Contact Me</h2>
             <FormFieldset>
                 <NameInput>

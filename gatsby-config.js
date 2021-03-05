@@ -38,5 +38,5 @@ module.exports = {
         icon: './src/images/logo_transparent.png'
       }
     }
-  ],
+  ]
 };
