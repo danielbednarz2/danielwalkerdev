@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import netflix from "../images/netflix.jpg"
+import netflix from "../images/movie_app.png"
 import money from "../images/money.jpg"
-import blog from "../images/blog.jpg"
+import blog from "../images/discover_boldly.png"
 import { NodeDotJs, Javascript, Strapi, ReactJs, MaterialUi, Postgresql} from "@icons-pack/react-simple-icons";
 
 
