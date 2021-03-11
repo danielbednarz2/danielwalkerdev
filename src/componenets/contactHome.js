@@ -31,7 +31,8 @@ const Form = styled.form`
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    border-radius: 5px;
 
     
     > * {
@@ -125,11 +126,16 @@ const Form = styled.form`
     @media(min-width:1200px) {
         width: 33%;
     }
+
+    @media(min-width:1500px) {
+        width: 25%;
+    }
 `
 
 const FormFieldset = styled.fieldset`
     display: flex;
     border: none;
+    justify-content: space-between;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -139,7 +145,7 @@ const FormFieldset = styled.fieldset`
 const NameInput = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 47.5%;
 
     @media (max-width: 768px) {
         flex-direction: row;

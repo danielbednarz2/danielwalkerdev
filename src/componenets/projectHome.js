@@ -3,7 +3,7 @@ import styled from "styled-components"
 import netflix from "../images/movie_app.png"
 import money from "../images/money.jpg"
 import blog from "../images/discover_boldly.png"
-import { NodeDotJs, Javascript, Strapi, ReactJs, MaterialUi, Postgresql} from "@icons-pack/react-simple-icons";
+import { NodeDotJs, Strapi, ReactJs, MaterialUi, Postgresql} from "@icons-pack/react-simple-icons";
 
 
 const Wrapper = styled.main`
@@ -89,7 +89,7 @@ const Project = styled.div`
 const Image = styled.img`
     width: 30%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 
     @media (max-width: 1024px) {
         height: 30%;
@@ -226,11 +226,11 @@ const ProjectHome = () => (
                 <span>|</span>
                 <span><a href="https://github.com/danielbednarz2/Discover-Boldly" target="_blank" rel="noreferrer">Source Code</a></span>
             </Links>
-            <p>This is my personal blog, I've used React for component-based structure and Strapi as a headless CMS to post content.</p>
+            <p>This is my personal blog, I've used React for component-based structure, Strapi as a headless CMS to serve content, and PostgreSQL to store article and category information.</p>
             <TechnologiesIncludes>Technologies included:</TechnologiesIncludes>
             <ul>
-                <li><Javascript className="myJS" /></li> 
                 <li><ReactJs className="myReact" /></li> 
+                <li><Postgresql className="myPostgresql" /></li> 
                 <li><Strapi className="myStrapi" /></li>
             </ul>
             </Description>
