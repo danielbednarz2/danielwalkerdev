@@ -199,7 +199,7 @@ const ProjectHome = () => (
                 </ul>
             </Description>
         </Project>
-        <Project className="column-reverse">
+        {/* <Project className="column-reverse">
             <Description >
             <h3>Financial Planner</h3>
             <Links>
@@ -216,7 +216,7 @@ const ProjectHome = () => (
             </ul>
             </Description>
             <Image src={money} />
-        </Project>
+        </Project> */}
         <Project>
             <Image src ={blog} />
             <Description >
@@ -235,7 +235,7 @@ const ProjectHome = () => (
             </ul>
             </Description>
         </Project>
-        <Project className="column-reverse">
+        {/* <Project className="column-reverse">
             <Description>
             <h3>Givens</h3>
             <Links>
@@ -252,7 +252,7 @@ const ProjectHome = () => (
             </ul>
             </Description>
             <Image src={money} />
-        </Project>
+        </Project> */}
       </Wrapper>
     </>
   )
