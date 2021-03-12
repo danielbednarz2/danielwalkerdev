@@ -5,7 +5,8 @@ import { Link } from 'react-scroll';
 
 
 const Top = styled.header`
-    height: 10vh;
+    height: auto;
+    min-height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,13 +14,18 @@ const Top = styled.header`
 `
 
 const Logo = styled.img`
-    height: 4rem;
-    width: auto;
+    width: 8vw;
+    max-width: 200px;
+    height: auto;
     filter: invert(100);
     z-index: 5;
 
     @media(max-width: 768px) {
     filter: ${({nav}) => nav ? "invert(0)" : "invert(100)"};
+    }
+
+    @media(min-width: 1500px) {
+        width: 5vw;
     }
 `
 
