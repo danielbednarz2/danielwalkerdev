@@ -65,6 +65,7 @@ const Intro = styled.h1`
 const Photo = styled(Img)`
     width: 60%;
     height: auto;
+    object-fit: contain;
 
     @media (max-width: 768px) {
         width: auto;
