@@ -248,7 +248,7 @@ const ProjectHome = () => (
                 <span>|</span>
                 <span><a href="https://github.com/danielbednarz2/Discover-Boldly" target="_blank" rel="noreferrer">Source Code</a></span>
             </Links>
-            <p>This is my personal blog, I've used React for component-based structure, Strapi as a headless CMS to serve content, and PostgreSQL to store article and category information.</p>
+            <p>This is my personal blog, I've used React for component-based structure, Strapi as a headless CMS to serve content, PostgreSQL to store article and category information, and Cloudinary for hosting images.</p>
             <TechnologiesIncludes>Technologies included:</TechnologiesIncludes>
             <ul>
                 <li><ReactJs className="myReact" /></li> 

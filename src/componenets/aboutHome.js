@@ -131,7 +131,7 @@ const AboutHome = () => (
     <Wrapper id="about">
       <About>
         <Info>
-            As a self-taught developer, I have spent the last few years learning the technologies listed here. Feel free to follow the links from each icon to see projects or articles I've produced in each tenchnogloy.
+            As a self-taught developer, I have spent the last few years learning the technologies listed here. Feel free to follow the links from each icon to see projects or articles I've produced in each tenchnology.
         </Info>
         <Tech>
             <ul>
