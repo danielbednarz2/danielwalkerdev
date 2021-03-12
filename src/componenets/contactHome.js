@@ -121,6 +121,10 @@ const Form = styled.form`
 
     .submit {
         padding: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     @media(min-width:1200px) {
@@ -178,6 +182,13 @@ const FormButton = styled.button`
     border-radius: 16px;
     outline: none;
     align-self: center;
+    background-color: #d5e1e6;
+    font-weight: 500;
+    border: 1px solid #083140;
+    
+    &:hover {
+        border: 2px solid #274A57;
+    }
 `
 
 const FormError = styled.div`

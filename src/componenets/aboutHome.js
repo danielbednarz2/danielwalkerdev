@@ -12,7 +12,8 @@ const Wrapper = styled.main`
 `
 
 const About = styled.div`
-    width: 90%;
+    width: 80vw;
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

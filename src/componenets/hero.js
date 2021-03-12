@@ -12,11 +12,6 @@ const Wrapper = styled.main`
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 1200px) {
-        width: 70vw;
-    }
 `
 
 const Main = styled.div`
@@ -27,7 +22,6 @@ const Main = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-        width: 100%;
     }
 `
 
@@ -40,7 +34,7 @@ const IntroWrapper = styled.div`
     justify-content: space-evenly;
 
     @media (max-width: 768px) {
-        width: 85%;
+        width: 100%;
     }
 `
 
@@ -69,7 +63,7 @@ const Intro = styled.h1`
 `
 
 const Photo = styled(Img)`
-    width: 50%;
+    width: 60%;
     height: auto;
 
     @media (max-width: 768px) {
@@ -102,6 +96,7 @@ const Button = styled(Link)`
   text-decoration:none;
   text-align: center;
   transition: 300ms;
+  margin-right: 1em;
 
   :hover {
     background: #F79F00;
@@ -112,7 +107,6 @@ const Button = styled(Link)`
 
 const Blurb = styled.p`
     height: auto;
-    width: 100%;
     font-size: 1.2rem;
     span {
         color: #274a57;
@@ -154,7 +148,10 @@ const Hero = () => {
                     <Blurb>
                         I'm a full stack web developer based in <span>Seattle, WA</span> with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team.
                     </Blurb>
-                    <Button to="projects"> My Work</Button>
+                    <div style={{'display': 'flex'}}>
+                    <Button to="projects">My Work</Button>
+                    <Button to="contact">Contact Me</Button>
+                    </div>
                 </IntroWrapper>
             </Main>
         </Wrapper>

@@ -76,38 +76,32 @@ const Wrapper = styled.main`
 
 const Project = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    margin: 2em 0;
-
-    @media (max-width: 1024px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    margin: 2em auto;
+    width: 80vw;
+    flex-direction: column;
 `
 
 const Image = styled.img`
-    width: 30%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 
-    @media (max-width: 1024px) {
-        height: 30%;
-        width: 60%;
-    }
+`
+
+const ImageHref = styled.a`
+    height: 30%;
+    width: 60%;
+    margin: auto;
+
 `
 
 const Description = styled.div`
     font-size: 1.1rem;
-    width: 30%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    @media (max-width: 1024px) {
-        width: 60%;
-        margin-top: 1.5em;
-    }
+    margin: 1.5em auto auto auto;
 
     h3 {
         @media (max-width: 768px) {
@@ -182,7 +176,9 @@ const ProjectHome = () => (
     <>
       <Wrapper id="projects">
         <Project>
-            <Image src={netflix} />
+            <ImageHref href="https://www.movieapp.dev" target="_blank" rel="noreferrer">
+                <Image src={netflix} />
+            </ImageHref>
             <Description>
                 <h3>Movie App</h3>
                 <Links>
@@ -218,7 +214,9 @@ const ProjectHome = () => (
             <Image src={money} />
         </Project> */}
         <Project>
-            <Image src ={blog} />
+            <ImageHref href="https://www.discoverboldly.com"  target="_blank" rel="noreferrer">
+                <Image src ={blog} />
+            </ImageHref>
             <Description >
             <h3>Discover Boldly</h3>
             <Links>
