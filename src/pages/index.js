@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../componenets/layout";
 import Hero from "../componenets/hero";
 import AboutHome from "../componenets/aboutHome";
@@ -6,7 +6,13 @@ import ProjectHome from "../componenets/projectHome";
 import ContactHome from "../componenets/contactHome";
 
 
-const Home = () => (
+const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return ( 
   <>
     <Layout>
       <Hero />
@@ -15,6 +21,7 @@ const Home = () => (
       <ContactHome />
     </Layout>
   </>
-)
+  )
+}
 
 export default Home;
