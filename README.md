@@ -4,7 +4,7 @@ Welcome to my personal portfolio source code!
 
 If you're looking for my actual blog just go here -> https://danielwalker.dev
 
-![Project Screenshot](/src/images/portfolio.png)
+![Project Screenshot](/src/images/portfolio.gif)
 
 This project was created with:
 * Gatsby
