@@ -1,0 +1,8 @@
+module.exports.HtmlIcon = require("./HTML")
+module.exports.ReactIcon = require("./React")
+module.exports.GraphIcon = require("./GraphQl")
+module.exports.ExpressIcon = require("./Express")
+module.exports.CssIcon = require("./CSS")
+module.exports.NodeIcon = require("./Node")
+module.exports.TailwindIcon = require("./Tailwind")
+module.exports.JavascriptIcon = require("./Javascript")
