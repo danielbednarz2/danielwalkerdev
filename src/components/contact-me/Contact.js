@@ -109,8 +109,7 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-medium text-white">Contact information</h3>
               <p className="mt-6 max-w-3xl text-base text-sky-50">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                lacus arcu.
+                Can't wait to hear from you!
               </p>
               <dl className="mt-8 space-y-6">
                 <dt>
@@ -121,7 +120,7 @@ export default function Contact() {
                   <span className="ml-3">danielbednarz2@gmail.com</span>
                 </dd>
               </dl>
-              <ul className="mt-8 flex space-x-12">
+              <ul className="mt-8 flex space-x-12 justify-center">
                 <li>
                   <a className="text-sky-200 hover:text-sky-100" href="https://www.linkedin.com/in/daniel-bednarz/" target="_blank" rel="noreferrer">
                     <span className="sr-only">LinkedIn</span>

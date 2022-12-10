@@ -1,6 +1,5 @@
 import Logo from '../../logo.svg'
 import { Link } from 'react-scroll'
-import { useState } from 'react'
 
 // const [ menu, setMenu ] = useState();
 
@@ -112,7 +111,7 @@ function Header () {
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
-            <Link className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg" activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}> 
+            <Link className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg" activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500}> 
             My Work
             </Link>
             </div>
