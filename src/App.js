@@ -1,5 +1,4 @@
 import './App.css';
-import { Link, animateScroll as scroll } from 'react-scroll'
 import Header from './components/header/Header'
 import About from './components/about/About'
 import Projects from './components/projects/Projects'
