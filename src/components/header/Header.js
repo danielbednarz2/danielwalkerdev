@@ -1,8 +1,9 @@
 import Logo from '../../logo.svg'
+import {Link, animateScroll as scroll} from 'react-scroll'
 
 function Header () {
     return (
-<div class="relative overflow-hidden bg-white">
+<div id="home" class="relative overflow-hidden bg-white">
   <div class="mx-auto max-w-7xl">
     <div class="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
       <svg class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
@@ -14,7 +15,7 @@ function Header () {
           <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
               <div class="flex w-full items-center justify-between md:w-auto">
-                <a href="#">
+                <a href="https://github.com/danielbednarz2" target="_blank" rel="noreferrer">
                   <span class="sr-only">Daniel Walker Dev</span>
                   <img alt="Daniel Walker Dev" class="h-8 w-auto sm:h-10 rounded-full" src={Logo} />
                 </a>
@@ -30,13 +31,19 @@ function Header () {
               </div>
             </div>
             <div class="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Home</a>
+            <Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Home</a> 
+            </Link>
+            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Projects</a> 
+            </Link>
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">About</a> 
+            </Link>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contact</a> 
+            </Link>
 
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Projects</a>
-
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">About</a>
-
-              <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contact</a>
             </div>
           </nav>
         </div>
@@ -67,15 +74,20 @@ function Header () {
               </div>
             </div>
             <div class="space-y-1 px-2 pt-2 pb-3">
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
 
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
-
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
-
-              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
+            <Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Home</a> 
+            </Link>
+            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Projects</a> 
+            </Link>
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">About</a> 
+            </Link>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}> 
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Contact</a> 
+            </Link>
             </div>
-            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-sky-600 hover:bg-gray-100">Log in</a>
           </div>
         </div>
       </div>
@@ -83,19 +95,22 @@ function Header () {
       <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block xl:inline">Hi, I'm 
-            <span class="block text-sky-600 xl:inline"> Daniel Walker </span>
-             a Full-Stack Developer 
-            </span>
+            <span class="block text-sky-600 text-6xl xl:block leading-relaxed"> Daniel Walker </span>
+            <span class="block xl:block">Full-Stack Engineer</span>
           </h1>
           <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">I'm a full stack web developer with a background in technical and customer-focused support. Looking for an opportunity to apply creative, analytical, and communicative skills on a development team. 
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
-              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg">My Work</a>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}> 
+            <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 md:py-4 md:px-10 md:text-lg">My Work</a>
+            </Link>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 px-8 py-3 text-base font-medium text-sky-700 hover:bg-sky-200 md:py-4 md:px-10 md:text-lg">Contact Me</a>
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}> 
+            <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 px-8 py-3 text-base font-medium text-sky-700 hover:bg-sky-200 md:py-4 md:px-10 md:text-lg">Contact Me</a>
+            </Link>
+              
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ function HtmlIcon({
     fill: "rgb(240, 219, 79)",
     viewBox: "0 0 24 24",
     strokeWidth: 0,
-    stroke: "rgb(240, 219, 79)",
+    stroke: "rgb(0, 0, 0)",
     "aria-hidden": "true",
     ref: svgRef,
     "aria-labelledby": titleId

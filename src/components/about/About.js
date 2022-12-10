@@ -54,7 +54,7 @@
   
  function About() {
     return (
-      <div className="bg-sky-700">
+      <div id="about" className="bg-sky-700">
         <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:max-w-7xl lg:px-8 lg:py-40">
           <h2 className="text-4xl font-bold tracking-tight text-white">Skills & Technologies</h2>
           <p className="text-center mt-6 text-lg leading-8 text-sky-200">
@@ -64,7 +64,7 @@
             {features.map((feature) => (
               <div key={feature.name}>
                 <div>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-40">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-50">
                     <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
                   </span>
                 </div>
